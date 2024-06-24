@@ -12,6 +12,6 @@ int main(){
     else{ // 自分が親プロセスと判断
     pwait = wait(&status);
     // 3. 子プロセスの終了待機
-    printf("child process %d is finished¥n", pwait);
+    printf("child process %d is finished\n", pwait);
     }
 }

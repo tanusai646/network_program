@@ -1,0 +1,10 @@
+$ ls -l > test.txt ; grep c < test.txt
+-rw-rw-r-- 1 imamura imamura   333  6月 24 21:40 3-1.c
+-rw-rw-r-- 1 imamura imamura   623  6月 24 21:57 3-12.c
+-rw-rw-r-- 1 imamura imamura  1087  6月 24 21:40 3-15.c
+-rw-rw-r-- 1 imamura imamura   495  6月 24 21:40 3-2.c
+-rw-rw-r-- 1 imamura imamura   467  6月 24 21:40 3-4.c
+-rw-rw-r-- 1 imamura imamura   322  6月 24 21:40 3-5.c
+-rw-rw-r-- 1 imamura imamura   946  6月 24 21:54 e3-2.c
+-rw-rw-r-- 1 imamura imamura   713  6月 24 21:40 e3-3.c
+-rw-rw-r-- 1 imamura imamura  1287  6月 24 21:40 e3-5.c

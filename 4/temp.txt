@@ -1,4 +1,4 @@
     PID TTY          TIME CMD
-   3971 pts/1    00:00:00 bash
-   6082 pts/1    00:00:00 ensyuu
-   6083 pts/1    00:00:00 ps
+   6425 pts/0    00:00:00 bash
+   9348 pts/0    00:00:00 ensyuu
+   9349 pts/0    00:00:00 ps
