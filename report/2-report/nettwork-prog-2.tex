@@ -1,0 +1,72 @@
+\documentclass[documentclass]{jsarticle}
+\usepackage[top=25truemm,bottom=25truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage{listings, jlisting, color}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{amssymb, latexsym}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{ulem}
+\usepackage{here}
+\usepackage{wrapfig}
+\usepackage{tikz}
+% 使用する関数の宣言
+\usepackage{url}
+% （最低限これさえ宣言していれば十分だと思われるものを書いています）
+\usetikzlibrary{intersections, calc, arrows, positioning, arrows.meta}
+
+
+\newcommand{\Add}[1]{\textcolor{red}{#1}}
+\newcommand{\Erase}[1]{\textcolor{red}{\sout{\textcolor{black}{#1}}}}
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
+
+\lstset{
+  basicstyle=\ttfamily,
+  breaklines=true,
+  frame=single,
+  tabsize=3,
+  numbers=left
+}
+
+\begin{document}
+\title{ネットワークプログラミング\\ 第2回演習レポート}
+\author{222C1021 今村優希}
+\maketitle
+
+\newpage
+
+\section*{演習1}
+*1の中身は，\texttt{*pt = 999}と入力した．
+出力結果は，\texttt{a = 123, b = 999, *pt = 999}となった．
+
+\section*{演習2}
+出力結果は，以下のソースコード1である．
+\lstinputlisting[caption=出力結果]{code/2-2.txt}
+上記の結果から考察を行う
+
+\subsubsection*{(a) 利用可能なメモリアドレス空間のサイズ(bit数)}
+上記アドレスの最小値は，\texttt{dp}の\texttt{00000027fabffc38}，最大値は\texttt{cp+2}の\texttt{00000027fabffc49}である．
+この差が\texttt{0x13}なので10進数にして，19バイトであることがわかる．よって，$19 \times 8 = 152bit$が使用可能なメモリアドレル空間であると考えられる．
+
+\subsubsection*{(b) 各データ型変数のメモリアドレス}
+\texttt{char}型は，\texttt{cp}と\texttt{cp+1}の差が1あるので，1バイト．
+\texttt{int}型は，\texttt{ip}と\texttt{ip+1}の差が4あるので，4バイト．
+\texttt{double}型は，\texttt{dp}と\texttt{dp+1}の差が8あるので，8バイト．
+
+\section*{演習3}
+作成したプログラムは，ソースコード2である．
+\lstinputlisting[caption=演習3]{code/e2-3.c}
+出力結果は，ソースコード3である．
+\lstinputlisting[caption=出力結果]{code/2-3.txt}
+
+\section*{演習4}
+作成したプログラムは，ソースコード4である．
+\lstinputlisting[caption={演習4}]{code/e2-4.c}
+出力決結果は，ソースコード5である．
+\lstinputlisting[caption={出力結果}]{code/2-4.txt}
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+\end{document}
