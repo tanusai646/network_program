@@ -8,3 +8,10 @@ $ ls -l > test.txt ; grep c < test.txt
 -rw-rw-r-- 1 imamura imamura   946  6月 24 21:54 e3-2.c
 -rw-rw-r-- 1 imamura imamura   713  6月 24 21:40 e3-3.c
 -rw-rw-r-- 1 imamura imamura  1287  6月 24 21:40 e3-5.c
+
+$ ls -l | grep put
+-rw-rw-r-- 1 imamura imamura    12  6月 24 21:40 input1.dat
+-rw-rw-r-- 1 imamura imamura    60  6月 24 21:40 input2.dat
+-rw-rw-r-- 1 imamura imamura    56  6月 24 21:40 output1.dat
+-rw-rw-r-- 1 imamura imamura    36  6月 24 21:54 output2.dat
+-rw-rw-r-- 1 imamura imamura    61  6月 24 21:55 output3.dat

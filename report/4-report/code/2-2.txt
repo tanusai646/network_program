@@ -1,0 +1,3 @@
+cp = 00000073f7bffe07, cp + 1 = 00000073f7bffe08, cp + 2 = 00000073f7bffe09
+ip = 00000073f7bffe00, ip + 1 = 00000073f7bffe04, ip + 2 = 00000073f7bffe08
+dp = 00000073f7bffdf8, dp + 1 = 00000073f7bffe00, dp + 2 = 00000073f7bffe08
