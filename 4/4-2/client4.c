@@ -10,7 +10,7 @@
 
 
 int main(){
-    int sockfd;
+    int sockfd, i;
     struct sockaddr_in address;
     char buf[80] = "\0";
 
@@ -29,16 +29,18 @@ int main(){
         perror("error\n");
         exit(1);
     }
-    printf("\n * server IP: %s, port: %d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
+    //printf("\n * server IP: %s, port: %d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
 
-    strcpy(buf, "client will connect to server");
-    write(sockfd, buf, strlen(buf));
+    //strcpy(buf, "client will connect to server");
+    //write(sockfd, buf, strlen(buf));
     
-    // サーバからのデータ受信
-    memset(buf, '\0', sizeof(buf)); // buf[]読み込み前に初期化
-    read(sockfd, buf, sizeof(buf));
-    printf("\n * message from server : %s \n", buf);
-
+    while(i != 10){ //i=10になったら読み込み終了
+        // サーバからのデータ受信
+        memset(buf, '\0', sizeof(buf)); // buf[]読み込み前に初期化
+        read(sockfd, buf, sizeof(buf));
+        i = atoi(buf);
+        printf("\n * message from server : %d \n", i);
+    }
     //ソケットの除去
     close(sockfd);
 }
