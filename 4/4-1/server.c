@@ -13,7 +13,7 @@ int main(){
     int fd;
     fd = open(PIPE, O_WRONLY); // 2.
     if (fd == -1){
-        fprintf(stderr, "PIPE does not exist! ¥n");
+        fprintf(stderr, "PIPE does not exist! \n");
         exit(1);
     }
     write(fd, buf, strlen(buf)); // 3.
