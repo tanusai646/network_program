@@ -10,6 +10,9 @@ int main(){
     fin = open("input2.dat", O_RDONLY);
     fout = open("output3.dat", O_WRONLY);
 
+    if(fin < 0){
+        exit(1);
+    }
     // 入力ファイル指定
     while(read(fin, buf, sizeof(buf)) != 0){
         write(fout, buf, strlen(buf));  //書き込み

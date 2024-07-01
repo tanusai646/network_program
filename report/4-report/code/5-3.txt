@@ -1,8 +1,0 @@
-$ gcc -o ensyuu e3-5.c
-$ ./ensyuu 
-child process 9853 is finished
--rw-rw-r-- 1 imamura imamura    12  6月 24 21:40 input1.dat
--rw-rw-r-- 1 imamura imamura    60  6月 24 21:40 input2.dat
--rw-rw-r-- 1 imamura imamura    56  6月 24 21:40 output1.dat
--rw-rw-r-- 1 imamura imamura    36  6月 24 21:54 output2.dat
--rw-rw-r-- 1 imamura imamura    61  6月 24 21:55 output3.dat
