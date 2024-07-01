@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.8.31)  1 JUL 2024 22:30
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.8.31)  1 JUL 2024 23:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -613,28 +613,81 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 39.
+File: figure/1-1.png Graphic file (type bmp)
+<figure/1-1.png>
+
+Overfull \hbox (15.16469pt too wide) in paragraph at lines 46--47
+ [] 
+ []
+
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 8.64899pt on input line 48.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 8.64899pt on input line 48.
+[2]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 48.
+(Font)              scaled to size 9.60999pt on input line 60.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 48.
-[2] [3] [4] [5] [6] [7] [8] (out/nettwork-prog-4.aux)
+(Font)              scaled to size 9.60999pt on input line 60.
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 60.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 60.
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbackslash' on input line 60.
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 61.
+(c:/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
+[3]
+File: figure/2-1.png Graphic file (type bmp)
+<figure/2-1.png>
+
+Overfull \hbox (17.27255pt too wide) in paragraph at lines 69--70
+ [] 
+ []
+
+[4] [5] [6]
+File: figure/3-1.png Graphic file (type bmp)
+<figure/3-1.png>
+
+Overfull \hbox (18.67781pt too wide) in paragraph at lines 88--89
+ [] 
+ []
+
+[7] [8] [9]
+File: figure/4-1.png Graphic file (type bmp)
+<figure/4-1.png>
+
+Overfull \hbox (14.26625pt too wide) in paragraph at lines 106--107
+ [] 
+ []
+
+[10]
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 115.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 115.
+[11] (out/nettwork-prog-4.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
  ) 
 Here is how much of TeX's memory you used:
- 18512 strings out of 475592
- 361519 string characters out of 5778113
- 2168637 words of memory out of 5000000
- 39720 multiletter control sequences out of 15000+600000
- 570614 words of font info for 96 fonts, out of 8000000 for 9000
+ 18590 strings out of 475592
+ 362738 string characters out of 5778113
+ 2141637 words of memory out of 5000000
+ 39783 multiletter control sequences out of 15000+600000
+ 572815 words of font info for 109 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  84i,6n,89p,482b,1729s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/nettwork-prog-4.dvi (8 pages, 44756 bytes).
+Output written on out/nettwork-prog-4.dvi (11 pages, 47948 bytes).

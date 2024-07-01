@@ -37,38 +37,80 @@
 \newpage
 
 \section*{演習1}
-作成したserver.cとclient.cを実行した結果が図である．
+作成したserver.cとclient.cを実行した結果が図\ref*{fig:1-1}である．
+server側で設定した文字列をclient側の出力できるのを確認できた．
 
 %演習課題1の出力結果の図
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.7]{figure/1-1.png}
+  \end{center}
+  \caption{server.cとclient.cの実行結果}
+  \label{fig:1-1}
+\end{figure}
 
+\newpage
 \section*{演習2}
 作成したserver2.cとclient2.cはソースコード\ref*{cd:2-1},\ref*{cd:2-2}である．
-このプログラムをコンパイルし，実行した結果が図である．
+このプログラムをコンパイルし，実行した結果が図\ref*{fig:2-1}である．
 左側がclient.cを，右側をserver.cを実行した結果を表している．
+server側で入力した文字列をclient側で同時に出力することができた．
+また，imamuraと入力することで終了させることもできた．
+
+なお，server2.cにおける\texttt{scanf("\%s", buf);}に対して\texttt{scanf("\%s\textbackslash n",buf);}
+のように，\textbackslash を加えると入力したものが遅れて出力される現象が確認できた．
 \lstinputlisting[caption={server2.c}\label{cd:2-1}]{code/server2.c}
 \lstinputlisting[caption={client2.c}\label{cd:2-2}]{code/client2.c}
 
 
 %server2.cとclient2.cの実行結果
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.7]{figure/2-1.png}
+  \end{center}
+  \caption{server2.cとclient2.cの実行結果}
+  \label{fig:2-1}
+\end{figure}
 
+\newpage
 \section*{演習3}
 作成したserver3.cとclient3.cはソースコード\ref*{cd:3-1},\ref*{cd:3-2}である．
-このプログラムをコンパイルし，実行した結果が図である．
+このプログラムをコンパイルし，実行した結果が図\ref*{fig:3-1}である．
 左側がclient3.cを，右側をserver3.cを実行した結果である．
+server側ではclient側で設定したIPアドレス等を出力することができたし，client側ではserver側で設定したIPアドレス等を出力することができた．
 \lstinputlisting[caption={server3.c}\label{cd:3-1}]{code/server3.c}
 \lstinputlisting[caption={client3.c}\label{cd:3-2}]{code/client3.c}
 
 
 %server3.cとclient3.cの実行結果
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.7]{figure/3-1.png}
+  \end{center}
+  \caption{server3.cとclient3.cの実行結果}
+  \label{fig:3-1}
+\end{figure}
 
+\newpage
 \section*{演習4}
-作成したserver4.cclient4.cはソースコードである．
-このプログラムをコンパイルし，実行した結果が図である．
+作成したserver4.cとclient4.cはソースコード\ref*{cd:4-1},\ref*{cd:4-2}である．
+このプログラムをコンパイルし，実行した結果が図\ref*{fig:4-1}である．
 左側と真ん中がclient4.cを，右側をserver4.cを実行した結果である．
+左側と真ん中は同時を多少時間を開けて実行したとしても，0から10まで出力されるのが確認できた．
 \lstinputlisting[caption={server4.c}\label{cd:4-2}]{code/server4.c}
 \lstinputlisting[caption={client4.c}\label{cd:4-1}]{code/client4.c}
 
 %server4.cとclient4.cの実行結果
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.55]{figure/4-1.png}
+  \end{center}
+  \caption{server4.cとclient4.cの実行結果}
+  \label{fig:4-1}
+\end{figure}
 
 
+\section*{備考}
+今回作成したプログラムをgithub上に公開した．\\
+\url{https://github.com/tanusai646/network_program/tree/main/4}
 \end{document}

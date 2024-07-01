@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1719840628 "out/nettwork-prog-4.dvi" "out/nettwork-prog-4.pdf" "out/nettwork-prog-4" 1719840628 0
-  "out/nettwork-prog-4.dvi" 1719840627 44756 a3e3d36eaf66a39ae0b17768edef32cb "latex"
+["dvipdf"] 1719843300 "out/nettwork-prog-4.dvi" "out/nettwork-prog-4.pdf" "out/nettwork-prog-4" 1719843301 0
+  "out/nettwork-prog-4.dvi" 1719843300 47948 d70389212bcaa5d46b39bb1b71022294 "latex"
   (generated)
   "out/nettwork-prog-4.pdf"
   (rewritten before read)
-["latex"] 1719840626 "c:/Users/imayu/Documents/program/network programing/report/4-report/nettwork-prog-4.tex" "out/nettwork-prog-4.dvi" "nettwork-prog-4" 1719840628 0
-  "c:/Users/imayu/Documents/program/network programing/report/4-report/nettwork-prog-4.tex" 1719840625 2591 23f3755a5e023c24f27129b4f28172e7 ""
+["latex"] 1719843297 "c:/Users/imayu/Documents/program/network programing/report/4-report/nettwork-prog-4.tex" "out/nettwork-prog-4.dvi" "nettwork-prog-4" 1719843301 0
+  "c:/Users/imayu/Documents/program/network programing/report/4-report/nettwork-prog-4.tex" 1719843296 4420 6b99b39b70c50f073b9807f64692f109 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1693405946 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1693408683 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm" 1693408683 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -14,8 +14,10 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1693403936 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1693403936 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1693403936 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1693403936 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1693403936 928 2dc8d444221b7a635bb58038579b861a ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1693403936 908 2921f8a10601f252058503cc6570e581 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1693403936 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1693403936 940 228d6584342e91276bf566bcf9716b83 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1693404866 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1693404866 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -32,7 +34,9 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1693404866 1120 8b7d695260f3cff42e636090a8002094 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1693404866 768 1321e9409b4137d6fb428ac9dc956269 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm" 1693406912 520 82a3d37183f34b6eb363a161dfc002c2 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm" 1693406912 520 d082ac03a1087bc1ec2a06e24a9f68c0 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm" 1693406912 520 4889cce2180234b97cad636b6039c722 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm" 1693406912 520 a74c6ed8cb48679fdc3ea874d9d34a7e ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy8.tfm" 1693406912 520 7bb3abb160b19e0ed6ac404bb59052b7 ""
   "c:/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty" 1693406516 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "c:/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty" 1693406516 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -108,6 +112,7 @@
   "c:/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty" 1693403942 2444 0d0c1ee65478277e8015d65b86983da2 ""
   "c:/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty" 1693406872 5319 5435f8f7051e23a851a1c665c5b84e22 ""
   "c:/texlive/2023/texmf-dist/tex/latex/base/latexsym.sty" 1693406872 2853 55e863529ba74c1de558934b1565f0d1 ""
+  "c:/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd" 1693406872 2469 7cf25c0dd8ba984c37b877b83027725f ""
   "c:/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd" 1693406873 2233 a8dae763ff42567048077a611a94f56b ""
   "c:/texlive/2023/texmf-dist/tex/latex/eso-pic/eso-pic.sty" 1693405667 11876 6ef493863ae0d7a984706973240c2237 ""
   "c:/texlive/2023/texmf-dist/tex/latex/float/float.sty" 1693405907 6749 16d2656a1984957e674b149555f1ea1d ""
@@ -161,9 +166,13 @@
   "code/server2.c" 1719839998 695 0905fd0283b2527a3a6d5c0cd6c20ea6 ""
   "code/server3.c" 1719840372 1470 3d6a7b32dd8f616fdaca68dc7435beab ""
   "code/server4.c" 1719840102 1803 2e4c7ed6db12d29e090a4b6f342974d5 ""
+  "figure/1-1.png" 1719841378 33638 2a421e4d043d4a85a4c0289482589e85 ""
+  "figure/2-1.png" 1719841448 31064 f152535894993ef8843eabdaff674dff ""
+  "figure/3-1.png" 1719841529 43827 3ca097684551d987972beb27713efb6b ""
+  "figure/4-1.png" 1719841798 64899 cb32d2d3025bb9b973ff90de6a11af59 ""
   "jlisting.sty" 1698678000 6230 9fa8fe97d5afbd5a433990256cc4d5a3 ""
-  "nettwork-prog-4.tex" 1719840625 2591 23f3755a5e023c24f27129b4f28172e7 ""
-  "out/nettwork-prog-4.aux" 1719840627 836 8f992e3a4a028bb8890ba46742bf04c5 "latex"
+  "nettwork-prog-4.tex" 1719843296 4420 6b99b39b70c50f073b9807f64692f109 ""
+  "out/nettwork-prog-4.aux" 1719843300 1525 843b9b9cbebf1493e9dd90256b957dc4 "latex"
   (generated)
   "out/nettwork-prog-4.aux"
   "out/nettwork-prog-4.dvi"
