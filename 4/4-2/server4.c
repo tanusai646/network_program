@@ -35,9 +35,8 @@ int main(){
         struct sockaddr_in address_c;
         unsigned int length_c = sizeof(address_c);
         sockfd_c = accept(sockfd_s, (struct sockaddr *)& address_c, &length_c);
-        //printf("\n * request from cluient IP: %s, port %d\n", inet_ntoa(address_c.sin_addr), ntohs(address_c.sin_port));
 
-        //fork文
+        //fork文、子プロセス作成
         if(fork() != 0) {   // 子プロセス側の処理、送受信操作
             close(sockfd_s);
             for(i = 0; i <= 10; i++){

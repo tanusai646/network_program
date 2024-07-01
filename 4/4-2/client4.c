@@ -29,10 +29,6 @@ int main(){
         perror("error\n");
         exit(1);
     }
-    //printf("\n * server IP: %s, port: %d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
-
-    //strcpy(buf, "client will connect to server");
-    //write(sockfd, buf, strlen(buf));
     
     while(i != 10){ //i=10になったら読み込み終了
         // サーバからのデータ受信
