@@ -1,0 +1,74 @@
+\documentclass[documentclass]{jsarticle}
+\usepackage[top=25truemm,bottom=25truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage{listings, jlisting, color}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{amssymb, latexsym}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{ulem}
+\usepackage{here}
+\usepackage{wrapfig}
+\usepackage{tikz}
+% 使用する関数の宣言
+\usepackage{url}
+% （最低限これさえ宣言していれば十分だと思われるものを書いています）
+\usetikzlibrary{intersections, calc, arrows, positioning, arrows.meta}
+
+
+\newcommand{\Add}[1]{\textcolor{red}{#1}}
+\newcommand{\Erase}[1]{\textcolor{red}{\sout{\textcolor{black}{#1}}}}
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
+
+\lstset{
+  basicstyle=\ttfamily,
+  breaklines=true,
+  frame=single,
+  tabsize=3,
+}
+
+\begin{document}
+\title{ネットワークプログラミング\\ 第6回演習レポート}
+\author{222C1021 今村優希}
+\maketitle
+
+\newpage
+
+\section*{演習1}
+作成したserver.cとclient.cを実行した結果が図である．
+
+%演習課題1の出力結果の図
+
+\section*{演習2}
+作成したserver2.cとclient2.cはソースコード\ref*{cd:2-1},\ref*{cd:2-2}である．
+このプログラムをコンパイルし，実行した結果が図である．
+左側がclient.cを，右側をserver.cを実行した結果を表している．
+\lstinputlisting[caption={server2.c}\label{cd:2-1}]{code/server2.c}
+\lstinputlisting[caption={client2.c}\label{cd:2-2}]{code/client2.c}
+
+
+%server2.cとclient2.cの実行結果
+
+\section*{演習3}
+作成したserver3.cとclient3.cはソースコード\ref*{cd:3-1},\ref*{cd:3-2}である．
+このプログラムをコンパイルし，実行した結果が図である．
+左側がclient3.cを，右側をserver3.cを実行した結果である．
+\lstinputlisting[caption={server3.c}\label{cd:3-1}]{code/server3.c}
+\lstinputlisting[caption={client3.c}\label{cd:3-2}]{code/client3.c}
+
+
+%server3.cとclient3.cの実行結果
+
+\section*{演習4}
+作成したserver4.cclient4.cはソースコードである．
+このプログラムをコンパイルし，実行した結果が図である．
+左側と真ん中がclient4.cを，右側をserver4.cを実行した結果である．
+\lstinputlisting[caption={server4.c}\label{cd:4-2}]{code/server4.c}
+\lstinputlisting[caption={client4.c}\label{cd:4-1}]{code/client4.c}
+
+%server4.cとclient4.cの実行結果
+
+
+\end{document}
