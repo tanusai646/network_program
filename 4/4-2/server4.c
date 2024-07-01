@@ -35,23 +35,22 @@ int main(){
         struct sockaddr_in address_c;
         unsigned int length_c = sizeof(address_c);
         sockfd_c = accept(sockfd_s, (struct sockaddr *)& address_c, &length_c);
-        printf("\n * request from cluient IP: %s, port %d\n", inet_ntoa(address_c.sin_addr), ntohs(address_c.sin_port));
+        //printf("\n * request from cluient IP: %s, port %d\n", inet_ntoa(address_c.sin_addr), ntohs(address_c.sin_port));
 
         //fork文
-        if(fork() != 0) { // 子プロセス側の処理、送受信操作
-            //read(sockfd_c, buf, sizeof(buf));
-            //printf("\n* message from client: %s\n", buf);
+        if(fork() != 0) {   // 子プロセス側の処理、送受信操作
+            close(sockfd_s);
             for(i = 0; i <= 10; i++){
                 memset(buf, '\0', sizeof(buf));
                 n = snprintf(buf, sizeof(i),"%d", i);
-                printf("%s", buf);
                 write(sockfd_c, buf, strlen(buf));
                 sleep(1);
             }
-            //strcpy(buf, "From Server via socket");
+            close(sockfd_c);
+            exit(0);
         }
-        else{ // 親プロセス側の処理、要求受付
-            
+        else{               // 親プロセス側の処理、要求受付  
+            close(sockfd_c);
         }
         close(sockfd_c);
     }   //繰り返し終了
