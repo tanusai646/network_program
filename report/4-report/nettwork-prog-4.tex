@@ -14,9 +14,11 @@
 \usepackage{tikz}
 % 使用する関数の宣言
 \usepackage{url}
-% （最低限これさえ宣言していれば十分だと思われるものを書いています）
+\usepackage{hyperref}
+\hypersetup{
+    pdfauthor={222C1021 今村優希},
+}
 \usetikzlibrary{intersections, calc, arrows, positioning, arrows.meta}
-
 
 \newcommand{\Add}[1]{\textcolor{red}{#1}}
 \newcommand{\Erase}[1]{\textcolor{red}{\sout{\textcolor{black}{#1}}}}
