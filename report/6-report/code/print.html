@@ -1,0 +1,29 @@
+<!--print.html-->
+<!--222C1021 今村優希-->
+
+<html>
+    <head>
+        <title>Webサーバーの環境変数表示</title>
+        <meta http-equiv="content-type" charset="utf-8">
+    </head>
+
+    <body text="#000000" BGCOLOR="#FFFFFF">
+        <h3 ALIGN="left">(4) 環境変数の確認</h3>
+        GETを用いた送信です。<br>
+        <form action="/cgi-bin/print.cgi" method="get">
+            <input type="text" name="get" value="">
+            <input type="submit" value="送信">
+            <input type="reset" value="取消">
+        </form>
+
+        <br>
+
+        POSTを用いた送信です。<br>
+
+        <form action="/cgi-bin/print.cgi" method="post">
+            <input type="text" name="post" value="">
+            <input type="submit" value="送信">
+            <input type="reset" value="取消">
+        </form>
+    </body>
+</html>
