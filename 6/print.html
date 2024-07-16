@@ -8,17 +8,19 @@
 
     <body text="#000000" BGCOLOR="#FFFFFF">
         <h3 ALIGN="left">(4) 環境変数の確認</h3>
-        POSTを用いた送信です。<br>
-
-        <form action="/cgi-bin/print.cgi" method="post">
-            <input type="text" name="post" value="">
+        GETを用いた送信です。<br>
+        <form action="/cgi-bin/print.cgi" method="get">
+            <input type="text" name="get" value="">
             <input type="submit" value="送信">
             <input type="reset" value="取消">
         </form>
 
-        GETを用いた送信です。<br>
-        <form action="/cgi-bin/print.cgi" method="get">
-            <input type="text" name="get" value="">
+        <br>
+
+        POSTを用いた送信です。<br>
+
+        <form action="/cgi-bin/print.cgi" method="post">
+            <input type="text" name="post" value="">
             <input type="submit" value="送信">
             <input type="reset" value="取消">
         </form>
