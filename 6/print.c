@@ -6,7 +6,7 @@ int main(){
     char buf[100]="\0";
     char *met1 = "GET";
     char *met2 = "POST";
-    printf("Content-type: text/html \n\n");
+    printf("Content-type: text/html\n\n");
     printf("<pre>\n");
     char *method = getenv("REQUEST_METHOD");
     printf("HTTP OK\n");
@@ -14,9 +14,9 @@ int main(){
     if(method == NULL){
         printf("method error\n");
     } else if(strcmp(met1, method) == 0){
-        printf("method = GET");
+        printf("method = GET\n");
     } else if(strcmp(met2, method) == 0){
-        printf("method == POST");
+        printf("method == POST\n");
     }
     
     printf("</pre>\n");
