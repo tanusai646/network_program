@@ -1,3 +1,6 @@
+/*print.c*/
+/*222C1021 今村優希*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,7 +18,7 @@ void get_for(){
     get_chn = strtok(get_buf, "=");
     //区切った後半(=以降)を出力する
     while((get_chn = strtok(NULL, "")) != NULL){
-        //tpがNULLを返すまで+を空白にする
+        //NULLを返すまで+を空白にする
         while((p = strchr(get_chn, '+')) != NULL){
             *p = ' ';
         }
@@ -37,7 +40,7 @@ void post_for(){
     //初回呼び出しをして、区切る
     post_chn = strtok(post_buf, "=");
     while((post_chn = strtok(NULL, "")) != NULL){
-        //tpがNULLを返すまで+を空白にする
+        //NULLを返すまで+を空白にする
         while((p = strchr(post_chn, '+')) != NULL){
             *p = ' ';
         }
