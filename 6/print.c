@@ -13,7 +13,7 @@ void get_for(){
 
     printf("method = GET\n");
     printf("String from WWW client : \n");
-    printf("%s \n", get_buf);
+    printf("%s \n\n", get_buf);
     //初回呼び出しをして、区切る
     get_chn = strtok(get_buf, "=");
     //区切った後半(=以降)を出力する
@@ -22,8 +22,8 @@ void get_for(){
         while((p = strchr(get_chn, '+')) != NULL){
             *p = ' ';
         }
-        printf("original string\n");
-        printf("%s\n", get_chn);
+        printf("original string :\n");
+        printf("%s\n\n", get_chn);
     }
 }
 
@@ -44,8 +44,8 @@ void post_for(){
         while((p = strchr(post_chn, '+')) != NULL){
             *p = ' ';
         }
-        printf("original string\n");
-        printf("%s\n", post_chn);
+        printf("original string :\n");
+        printf("%s\n\n", post_chn);
     }
 }
 
