@@ -16,8 +16,8 @@
         ws.addEventListener('message', e => { console.log(e.data); })
         //<!-- ボタンクリック時に実行 ～ my_messageに送信したい文字列を設定し、WSサーバへ送信 -->
         document.getElementById('send_button').addEventListener('click', e => {
-        var my_message = "hello";
-        ws.send(my_message);
+            var my_message = "hello";
+            ws.send(my_message);
         })
     </script>
 <!-- ※ 青字：JavaScriptイベントハンドラ 緑字：画面表示/メッセージ送信のWebSocket用メソッド -->
