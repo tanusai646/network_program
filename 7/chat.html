@@ -1,0 +1,39 @@
+<!--222C1021 今村優希-->
+<!--ws.html-->
+<!DOCTYPE html><html lang="ja">
+    <head> <meta charset="UTF-8"> <title> WebSocketの確認 </title> </head>
+    <body>
+    <form name="input" action=""> <!-- 送信ボタンの設定 ～formのactionは未設定とする -->
+        <input type="button" name="send" id="send_button" value="message送信">
+    </form>
+    <br>
+    メッセージを送信して，コンソールに出力を行う．
+    <form>
+        <input type="text" name="message" value="">
+        <input type="button" name="send" id="message_button" value="message送信">
+    </form>
+
+
+    <!--json の埋め込み/実行-->
+    <script> 
+        //<!-- WebSocketのクライアントの生成 （※ localhost ～ マシン内で確認） -->
+        let ws = new WebSocket('ws://localhost:8080');
+        //<!-- 接続時に実行 ～ openイベントが発生 -->
+        ws.addEventListener('open', e => { console.log('WebSocket で接続'); })
+        //<!-- サーバからデータ受信 ～ messageイベント発生、e.dataとして格納データをコンソール表示 -->
+        ws.addEventListener('message', e => { console.log(e.data); })
+        //<!-- ボタンクリック時に実行 ～ my_messageに送信したい文字列を設定し、WSサーバへ送信 -->
+        document.getElementById('send_button').addEventListener('click', e => {
+            var my_message = "hello";
+            ws.send(my_message);
+        })
+        //コンソールに送信
+        document.getElementById('message_button').addEventListener('click', e =>{
+            var my_put_message = document.input.message.value;
+            ws.send(my_put_message);
+        })
+
+
+    </script>
+<!-- ※ 青字：JavaScriptイベントハンドラ 緑字：画面表示/メッセージ送信のWebSocket用メソッド -->
+</body></html>
