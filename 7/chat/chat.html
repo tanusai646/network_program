@@ -3,16 +3,23 @@
 <!DOCTYPE html><html lang="ja">
     <head> 
         <meta charset="UTF-8"> 
-        <link rel="chat" href="chat.css">
-        <title> WebSocketの確認 </title> 
+        <link rel="stylesheet" href="chat.css">
+        <title> Chatアプリ </title> 
     </head>
     <body>       
         メッセージを送信して，コンソールに出力を行う．
-        <form name="input2" action="">
-            <input type="text" name="user" value="">
-            <input type="text" name="message" value="">
-            <input type="button" name="send" id="message_button" value="送信">
-        </form>
+        <section class="content">
+
+        </section>
+
+        <send class="send">
+            <form name="input2" action="">
+                <input type="text" name="user" value="">
+                <input type="text" name="message" value="">
+                <input type="button" name="send" id="message_button" value="送信">
+            </form>
+        </send>
+
 
         <div id="chat_area"></div>
 

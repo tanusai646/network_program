@@ -35,15 +35,16 @@ document.getElementById('message_button').addEventListener('click', e =>{
 
 //ユーザー表示
 function displayUser(user, type){
-    const chatbox =
-    '<li><div class="user_myself">' +
-    '<p class="say say-r">' +
-    user +
-    '</p>' +
-    '</div></li>';
-    $('#chat-area').append(chatbox);
-    // メッセージ最下部までスクロール
-    $(window).scrollTop($('#chat-area')[0].scrollHeight);
+    let ChatArea = document.getElementById('chat_area');
+    let MessageElement = document.createElement('div');
+    if(type == 'myself'){
+        MessageElement.textContent = 'あなた';
+        MessageElement.classList.add('user_myself');
+        ChatArea.appendChild(MessageElement);
+    } else{
+        MessageElement.textContent = user;
+        ChatArea.appendChild(MessageElement);
+    }
 } 
 
 //メッセージを表示
