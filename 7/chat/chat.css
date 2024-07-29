@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.user_myself{
+    margin-left: auto;
+}
+
+.message{
+    text-align: center;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
