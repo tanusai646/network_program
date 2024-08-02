@@ -56,9 +56,15 @@ int main(){
             fd = open(buf, O_RDONLY);
             if(fd == -1){
                 printf("file can't the open\n");
+                //ファイルが開けなかった場合、bufにerrorを入れて送信
+                strcpy(buf, "error");
+                write(sockfd_c, buf, strlen(buf));
                 exit(1);
+            } else {
+                strcpy(buf, "OK");
+                write(sockfd_c, buf, strlen(buf));
             }
-            strcpy(buf, "From Server via socket");
+
             write(sockfd_c, buf, strlen(buf));
             printf("start write\n");
             while(1){
