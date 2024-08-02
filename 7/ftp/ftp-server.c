@@ -38,11 +38,11 @@ int main(){
     struct sockaddr_in address_c;
     unsigned int length_c = sizeof(address_c);
 
-    int sockfd_c = accept(sockfd_s, (struct sockaddr *)& address_c, &length_c);
-
     /*子プロセスでファイルの送受信を行う*/
     pid = fork();
     while(1){
+        int sockfd_c = accept(sockfd_s, (struct sockaddr *)& address_c, &length_c);
+        pid = fork();
         if(pid == 0){
             printf("\n * request from client IP: %s, port %d\n", inet_ntoa(address_c.sin_addr), ntohs(address_c.sin_port));
             //学生番号の取得
@@ -53,19 +53,20 @@ int main(){
             //学生番号と.txtを結合
             strcat(buf, txt);
             printf("%s\n", buf);    //debug
-            fd = fopen(buf, O_RDONLY);
-            if(fd == NULL){
+            fd = open(buf, O_RDONLY);
+            if(fd == -1){
                 printf("file can't the open\n");
                 exit(1);
             }
             strcpy(buf, "From Server via socket");
             write(sockfd_c, buf, strlen(buf));
-
+            printf("start write\n");
             while(1){
                 memset(buf, '\0', sizeof(buf)); // buf[]読み込み前に初期化
                 read(fd, buf, sizeof(buf));     //ファイルの内容をbufに格納
                 write(sockfd_c, buf, strlen(buf));//送信
-                if(strcmp(buf, end) == 0){
+                if(strstr(buf, end) != NULL){
+                    printf("finished write\n");
                     break;
                 }
             } 
