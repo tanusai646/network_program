@@ -16,7 +16,7 @@ int main(){
     int sockfd, fd;
     struct sockaddr_in address;
     char buf[80] = "\0";
-    char end[10] = "exid_send";
+    char end[10] = "exit_send";
     //INETドメイン、ストリームソケットを利用
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -53,17 +53,15 @@ int main(){
     }
 
     /*サーバからのデータ受信*/ 
-    //入力がexid_sendになるまで読み込み、.txtに書き込む
-    while(strcmp(buf, end) != 0){
+    //入力がexit_sendになるまで読み込み、.txtに書き込む
+    while(1){
         memset(buf, '\0', sizeof(buf)); // buf[]読み込み前に初期化
-        read(sockfd, buf, sizeof(buf));
-        if(strcmp(buf, end) == 0){
-            close(fd);
-            close(sockfd);
-            printf("read finish\n");
-            exit(1);
-        }
+        int point = read(sockfd, buf, sizeof(buf));
         write(fd, buf, strlen(buf));
+        if(strcmp(buf, end) == 0){
+            printf("read finish\n");
+            break;
+        }
     } 
 
 
