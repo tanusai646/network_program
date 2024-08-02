@@ -17,7 +17,6 @@ int main(){
     struct sockaddr_in address;
     char buf[80] = "\0";
     char end[10] = "exit_send";
-    char error[] = "error";
     //INETドメイン、ストリームソケットを利用
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -44,15 +43,9 @@ int main(){
     scanf("%s", buf);
     write(sockfd, buf, strlen(buf));
 
-    //errorが出ていないか確認
-    read(sockfd, buf, sizeof(buf));
-    if(strcmp(buf, error) == 0){
-        printf("the ID is wrong\n");
-        exit(1);
-    }
+    printf("read start\n");
 
     /*222C1021-copy.txtのオープン*/
-    printf("read start\n");
     fd = open("222C1021-test.txt", O_WRONLY);
     if(fd == -1){
         fprintf(stderr, "can't open the file\n");
