@@ -13,7 +13,7 @@ ws.addEventListener('message', e => {
     console.log(receivedata); 
 
     displayUser(receivedata.user, receivedata.from);
-    displayMessage(receivedata.message);
+    displayMessage(receivedata.message, receivedata.from);
 });
 
 //<!-- ボタンクリック時に実行 ～ my_messageに送信したい文字列を設定し、WSサーバへ送信 -->
@@ -43,15 +43,22 @@ function displayUser(user, type){
         ChatArea.appendChild(MessageElement);
     } else{
         MessageElement.textContent = user;
+        MessageElement.classList.add('user_other');
         ChatArea.appendChild(MessageElement);
     }
 } 
 
 //メッセージを表示
-function displayMessage(message){
+function displayMessage(message, type){
     let ChatArea = document.getElementById('chat_area');
     let MessageElement = document.createElement('div');
-    MessageElement.classList.add('message');
-    MessageElement.textContent = message;
-    ChatArea.appendChild(MessageElement);
+    if(type == 'myself'){
+        MessageElement.classList.add('message_myself');
+        MessageElement.textContent = message;
+        ChatArea.appendChild(MessageElement);
+    } else {
+        MessageElement.classList.add('message_other');
+        MessageElement.textContent = message;
+        ChatArea.appendChild(MessageElement);
+    }
 }
