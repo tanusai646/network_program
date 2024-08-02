@@ -1,0 +1,120 @@
+\documentclass[documentclass]{jsarticle}
+\usepackage[top=25truemm,bottom=25truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage{listings, jlisting, color}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{amssymb, latexsym}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{ulem}
+\usepackage{here}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    pdfauthor={222C1021 今村優希},
+}
+\usetikzlibrary{intersections, calc, arrows, positioning, arrows.meta}
+
+\newcommand{\Add}[1]{\textcolor{red}{#1}}
+\newcommand{\Erase}[1]{\textcolor{red}{\sout{\textcolor{black}{#1}}}}
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
+
+\lstset{
+  basicstyle=\ttfamily,
+  breaklines=true,
+  frame=single,
+  tabsize=3,
+}
+
+\begin{document}
+\title{ネットワークプログラミング\\ 最終レポート}
+\author{222C1021 今村優希}
+\maketitle
+
+\newpage
+
+\section*{演習2}
+
+\newpage
+
+\section*{演習3}
+\subsection*{3.1}
+ソースコード\ref*{sc:3-1}は，ソケット通信を利用し，学生番号を入力し，受診した文字列をテキストファイルに格納するプログラムである．
+図\ref*{fig:3-1}が，このプログラムを実行した際の出力である．
+
+IPアドレス131.206.37.50に接続できた．
+\texttt{222C1021.txt}の内容を受診し，\texttt{222C1021-copy.txt}に書き込むことができた．
+
+\lstinputlisting[caption={ftp.c}\label{sc:3-1}]{code/ftp.c}
+%ftp動作の図
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[]{figure/3-1.png}
+  \end{center}
+  \caption[]{\texttt{ftp.c}を実行した結果}
+  \label{fig:3-1}
+\end{figure}
+
+\section*{3-2}
+取得したテキストファイルは以下の内容であった．
+\begin{tcolorbox}
+  課題：ルータにおけるIPデータグラム（パケット）転送
+
+  1. インターネットはパケット単位の蓄積交換方式（パケット交換方式）を採用するが、その利点と問題点を説明せよ。
+  
+  2. 異種ネットワークを相互接続し、1.の主体となる「ルータ」において、到着パケットの転送先を決定する経路制御方式を一般的に何と呼ぶか答え、IPv4アドレスを仮定した場合、どのように実現するか調査、説明せよ。
+  
+  3. 代表的な経路情報交換プロトコルにRIP(Routing Information Protocol)とOSPF(Open Shortest Path First)がある。両者の違いを説明せよ。
+\end{tcolorbox}
+
+\subsubsection*{課題1}
+まず，蓄積交換方式とは，参考文献[1]によると「インターネットではルータにおいてパケットをいったん蓄積して(store)，次のルータに転送する(forward)を意味している」とある．
+
+したがって，蓄積交換方式のメリットとして，複数人で利用する際にインターネット資源を共有することができるという点が挙げられる．
+送信したいデータをパケットに分割することで，長いデータを送信したい等で資源を専有されることがなく，公平に使用することが可能である．
+
+一方，デメリットとしてパケット到着の遅延と廃棄が発生する可能性があるという点が挙げられる．
+通信回線の利用率が高いとき，複数のパケットがルータに到着する可能性があり，バッファで待機することで遅延が発生する．
+さらに，この遅延が行き過ぎると，バッファにパケットが入らなくなり，パケットの廃棄が発生する．
+そうなるとパケットの再送が必要で効率が落ちる可能性がある．
+
+\subsubsection*{課題2}
+ルータにおける到着パケットの転送先を決定する経路制御方式を\textbf{経路制御}または\textbf{ルーティング}という．
+さらに，\textbf{ホップバイホップ制御}を使っている．
+その制御の中でも2種類の制御方法があり，\textbf{静的経路制御}と\textbf{動的経路制御}が存在する．
+静的経路制御は，ルータの管理者が経路表を自ら作成しているのに対して，動的経路制御は経路表をルータ自身で行っている．
+よって，現在では後者の動的経路制御で行っているのが一般的である．
+
+IPv4アドレスと仮定し動的経路制御を用いて転送を行うと考える．
+まず，ルータは経路表を作成し，各宛先ネットワークの経路情報を保存している．
+下記で詳しく解答する動的経路制御プロトコルを利用してルータ同士で経路情報を交換し，更新を行っている．
+そして，ルータがパケットを受診したときに宛先IPアドレスを確認する．
+そのIPアドレスと経路表を参照して次の転送先を決定し，転送を行っている．
+
+\subsubsection*{課題3}
+RIPは，参考文献[2]によると，宛先アドレスとメトリックを含んだ経路情報を隣接するルータの間で交換し自己の経路表を作成するとされている．
+メトリックとは，経由するルータの数，ホップ数が使用されている．
+経路表はBellman-Fordアルゴリズムを用いて最短経路で宛先アドレスに到達できるようにしている．
+この方法から，RIPは距離ベクトル型経路制御プロトコルとして使用されている．
+
+OSPFは参考文献[2]によると，近隣ルータの認識，リンク状態情報とLSDBの作成および管理，LSDBをもとにした最短経路作成，代表ルータ，階層化，EGPといった多くの機能を備えたプロトコルである．
+以下でそれぞれについて詳細に説明する．
+
+\subsection*{3-3}
+作成したserverは
+
+\newpage
+\section*{備考}
+\url{https://github.com/tanusai646/network_program/tree/main/7}
+
+\begin{thebibliography}{9}
+  \bibitem{1} 尾家祐二 後藤滋樹 小西和憲 西尾章治郎, 1 インターネット入門, 株式会社岩波書店, 2002 
+  \bibitem{2} 堀良影 池永全志 門林雄基 後藤滋樹, 2 ネットワーク相互接続, 株式会社岩波書店, 2001
+\end{thebibliography}
+
+\end{document}
