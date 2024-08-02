@@ -13,10 +13,10 @@
 
 
 int main(){
-    int sockfd;
+    int sockfd, fd;
     struct sockaddr_in address;
     char buf[80] = "\0";
-
+    char end[10] = "exid_send";
     //INETドメイン、ストリームソケットを利用
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -26,6 +26,7 @@ int main(){
     address.sin_port = htons(50000);
 
     //クライアントからの接続要求とサーバ情報を確認
+    //川原研のサーバーに接続
     int res = connect(sockfd, (struct sockaddr *)&address, sizeof(address));
 
     if(res == -1){
@@ -34,14 +35,29 @@ int main(){
     }
     printf("\n * server IP: %s, port: %d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
 
-    strcpy(buf, "client will connect to server");
-    write(sockfd, buf, strlen(buf));
+    //strcpy(buf, "client will connect to server");
+    //write(sockfd, buf, strlen(buf));
     
-    // サーバからのデータ受信
-    memset(buf, '\0', sizeof(buf)); // buf[]読み込み前に初期化
-    read(sockfd, buf, sizeof(buf));
-    printf("\n * message from server : %s \n", buf);
+    //サーバーに学生番号を送信
+    scanf("%s", buf);
+    write(sockfd, buf, strlen(buf));
 
-    //ソケットの除去
-    close(sockfd);
+    /*222C1021-copy.txtのオープン*/
+    fd = open("222C1021-copy.txt", O_WRONLY);
+    if(fd == -1){
+        fprintf(stderr, "can't open the file\n");
+        exit(1);
+    }
+
+    /*サーバからのデータ受信*/ 
+    //入力が
+    while(strcpy(buf, end) != 0){
+        memset(buf, '\0', sizeof(buf)); // buf[]読み込み前に初期化
+        read(sockfd, buf, sizeof(buf));
+        write(fd, buf, strlen(buf));
+    }
+    printf("\n * message from server is end\n");
+
+    close(fd);      //222C1021-copy.txtのクローズ
+    close(sockfd);  //ソケットの除去
 }
