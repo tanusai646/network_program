@@ -15,7 +15,6 @@ int main(){
     int i = 0;
     fd = open(PIPE, O_WRONLY); // 2.
     while(strcmp(buf, test) != 0){
-        
         if (fd == -1){
             fprintf(stderr, "PIPE does not exist! \n");
             exit(1);
