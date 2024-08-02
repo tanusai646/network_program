@@ -39,8 +39,11 @@ int main(){
     //write(sockfd, buf, strlen(buf));
     
     //サーバーに学生番号を送信
+    printf("Your ID:");
     scanf("%s", buf);
     write(sockfd, buf, strlen(buf));
+
+    printf("read start\n");
 
     /*222C1021-copy.txtのオープン*/
     fd = open("222C1021-copy.txt", O_WRONLY);
@@ -50,14 +53,21 @@ int main(){
     }
 
     /*サーバからのデータ受信*/ 
-    //入力が
-    while(strcpy(buf, end) != 0){
+    //入力がexid_sendになるまで読み込み、.txtに書き込む
+    while(strcmp(buf, end) != 0){
         memset(buf, '\0', sizeof(buf)); // buf[]読み込み前に初期化
         read(sockfd, buf, sizeof(buf));
+        if(strcmp(buf, end) == 0){
+            close(fd);
+            close(sockfd);
+            printf("read finish\n");
+            exit(1);
+        }
         write(fd, buf, strlen(buf));
-    }
-    printf("\n * message from server is end\n");
+    } 
+
 
     close(fd);      //222C1021-copy.txtのクローズ
     close(sockfd);  //ソケットの除去
+
 }
