@@ -17,6 +17,8 @@ int main(){
     int sockfd_s, fd, pid, pwait;
     struct sockaddr_in address_s;
     char buf[80] = "\0";
+    char txt[] = ".txt";
+    char end[10] = "exit_send";
 
     //INETドメイン、ストリームソケットを利用
     sockfd_s = socket(AF_INET, SOCK_STREAM, 0);
@@ -46,11 +48,27 @@ int main(){
             //学生番号の取得
             memset(buf, '\0', sizeof(buf));
             read(sockfd_c, buf, sizeof(buf));
-            printf("\n* message from client: %s\n", buf);
+            //printf("\n* message from client: %s\n", buf);
             
+            //学生番号と.txtを結合
+            strcat(buf, txt);
+            printf("%s\n", buf);    //debug
+            fd = fopen(buf, O_RDONLY);
+            if(fd == NULL){
+                printf("file can't the open\n");
+                exit(1);
+            }
             strcpy(buf, "From Server via socket");
             write(sockfd_c, buf, strlen(buf));
 
+            while(1){
+                memset(buf, '\0', sizeof(buf)); // buf[]読み込み前に初期化
+                read(fd, buf, sizeof(buf));     //ファイルの内容をbufに格納
+                write(sockfd_c, buf, strlen(buf));//送信
+                if(strcmp(buf, end) == 0){
+                    break;
+                }
+            } 
             close(sockfd_c);
             close(sockfd_s);
 

@@ -26,7 +26,7 @@ int main(){
     address.sin_port = htons(5000);
 
     //クライアントからの接続要求とサーバ情報を確認
-    //川原研のサーバーに接続
+    //サーバーに接続
     int res = connect(sockfd, (struct sockaddr *)&address, sizeof(address));
 
     if(res == -1){
@@ -56,7 +56,7 @@ int main(){
     //入力がexit_sendになるまで読み込み、.txtに書き込む
     while(1){
         memset(buf, '\0', sizeof(buf)); // buf[]読み込み前に初期化
-        int point = read(sockfd, buf, sizeof(buf));
+        read(sockfd, buf, sizeof(buf));
         write(fd, buf, strlen(buf));
         if(strcmp(buf, end) == 0){
             printf("read finish\n");
