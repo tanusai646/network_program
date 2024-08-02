@@ -6,6 +6,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/socket.h>
+#include <sys/wait.h>
 #include <netinet/in.h>
 #include <arpa/inet.h> 
 #include <fcntl.h>
@@ -42,16 +43,20 @@ int main(){
     while(1){
         if(pid == 0){
             printf("\n * request from client IP: %s, port %d\n", inet_ntoa(address_c.sin_addr), ntohs(address_c.sin_port));
+            //学生番号の取得
             memset(buf, '\0', sizeof(buf));
             read(sockfd_c, buf, sizeof(buf));
             printf("\n* message from client: %s\n", buf);
-
+            
             strcpy(buf, "From Server via socket");
             write(sockfd_c, buf, strlen(buf));
 
             close(sockfd_c);
             close(sockfd_s);
+
+            exit(1);
         } else{
+            int status;
             pwait = waitpid(-1, &status, WNOHANG);
             printf("sarver wait\n");
         }
