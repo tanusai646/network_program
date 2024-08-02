@@ -18,6 +18,7 @@ int main(){
     struct sockaddr_in address_s;
     char buf[80] = "\0";
     char txt[] = ".txt";
+    char id[8] = "\0";
     char end[10] = "exit_send";
 
     //INETドメイン、ストリームソケットを利用
@@ -47,22 +48,15 @@ int main(){
             printf("\n * request from client IP: %s, port %d\n", inet_ntoa(address_c.sin_addr), ntohs(address_c.sin_port));
             //学生番号の取得
             memset(buf, '\0', sizeof(buf));
-            read(sockfd_c, buf, sizeof(buf));
-            //printf("\n* message from client: %s\n", buf);
-            
+            read(sockfd_c, id, sizeof(id));
+
             //学生番号と.txtを結合
-            strcat(buf, txt);
-            printf("%s\n", buf);    //debug
-            fd = open(buf, O_RDONLY);
+            strcat(id, txt);
+            printf("%s\n", id);    //debug
+            fd = open(id, O_RDONLY);
             if(fd == -1){
                 printf("file can't the open\n");
-                //ファイルが開けなかった場合、bufにerrorを入れて送信
-                strcpy(buf, "error");
-                write(sockfd_c, buf, strlen(buf));
                 exit(1);
-            } else {
-                strcpy(buf, "OK");
-                write(sockfd_c, buf, strlen(buf));
             }
 
             write(sockfd_c, buf, strlen(buf));
