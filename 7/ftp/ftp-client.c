@@ -1,5 +1,5 @@
 /*222C1021 今村優希*/
-/*ftp.c*/
+/*ftp-client.c*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,9 +34,6 @@ int main(){
         exit(1);
     }
     printf("\n * server IP: %s, port: %d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
-
-    //strcpy(buf, "client will connect to server");
-    //write(sockfd, buf, strlen(buf));
     
     //サーバーに学生番号を送信
     printf("Your ID:");
@@ -45,7 +42,7 @@ int main(){
 
     printf("read start\n");
 
-    /*222C1021-copy.txtのオープン*/
+    /*222C1021-test.txtのオープン*/
     fd = open("222C1021-test.txt", O_WRONLY);
     if(fd == -1){
         fprintf(stderr, "can't open the file\n");
@@ -65,7 +62,7 @@ int main(){
     } 
 
 
-    close(fd);      //222C1021-copy.txtのクローズ
+    close(fd);      //222C1021-test.txtのクローズ
     close(sockfd);  //ソケットの除去
 
 }

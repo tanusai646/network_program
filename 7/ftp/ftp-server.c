@@ -1,5 +1,5 @@
 /*222C1021 今村優希*/
-/*server3.c*/
+/*ftp-server.c*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -48,7 +48,6 @@ int main(){
             //学生番号の取得
             memset(buf, '\0', sizeof(buf));
             read(sockfd_c, buf, sizeof(buf));
-            //printf("\n* message from client: %s\n", buf);
             
             //学生番号と.txtを結合
             strcat(buf, txt);
