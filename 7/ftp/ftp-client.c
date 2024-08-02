@@ -58,7 +58,7 @@ int main(){
         memset(buf, '\0', sizeof(buf)); // buf[]読み込み前に初期化
         read(sockfd, buf, sizeof(buf));
         write(fd, buf, strlen(buf));
-        if(strstr(buf, end) == 0){
+        if(strstr(buf, end) != NULL){
             printf("read finish\n");
             break;
         }
