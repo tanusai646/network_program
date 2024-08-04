@@ -1,0 +1,30 @@
+<!--222C1021 今村優希-->
+<!--chat.html-->
+<!DOCTYPE html><html lang="ja">
+    <head> 
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="chat.css">
+        <title> Chatアプリ </title> 
+    </head>
+    <body>       
+        メッセージを送信して，受信を行う．
+        <section class="content">
+
+        </section>
+
+        <send class="send">
+            <form name="input2" action="">
+                <input type="text" name="user" value="">
+                <input type="text" name="message" value="">
+                <input type="button" name="send" id="message_button" value="送信">
+            </form>
+        </send>
+
+
+        <div id="chat_area"></div>
+
+        <!--json の埋め込み/実行-->
+        <script src="chat.js">
+         </script>
+<!-- ※ 青字：JavaScriptイベントハンドラ 緑字：画面表示/メッセージ送信のWebSocket用メソッド -->
+</body></html>

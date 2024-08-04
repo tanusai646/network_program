@@ -39,6 +39,41 @@
 \newpage
 
 \section*{演習2 WSによる簡易チャット/LINEの作成}
+作成したものは\texttt{chat.html}，\texttt{chat.js}，\texttt{chat.css}で，\texttt{server.js}も多少変更を行った．
+\texttt{chat.html}(ソースコード\ref*{sc:2-1})に関しては名前とメッセージを入力できるようした．
+そして，\texttt{chat.js}(ソースコード\ref*{sc:2-2})によってその名前とメッセージの入力を確認し，ウェブソケットで送信し，受信した内容を表示をすることができる．
+\texttt{chat.css}(ソースコード\ref*{sc:2-3})は，チャットのように表示させたかったため使用していたが，表示は中途半端になってしまった．
+
+\texttt{server.js}(ソースコード\ref*{sc:2-4})に関しては，受信・送信するデータが違ったため，変更を加えた．
+
+上記のhtmlを実行した結果が図\ref*{fig:2-1}で，\texttt{server.js}の動作結果が図\ref*{fig:2-2}である．
+htmlの画面において，先に左側で名前とメッセージを入力し，送信をした．
+次に，右側から送信を行った．
+コンソールには2つのメッセージの内容が表示されているのが確認でき，また自分が入力したものは緑色で表示され，相手が入力してきたものは白色で表示されるようCSSを編集している．
+
+\lstinputlisting[caption={chat.html}\label{sc:2-1}]{code/chat.html}
+\lstinputlisting[caption={chat.js}\label{sc:2-2}]{code/chat.js}
+\lstinputlisting[caption={chat.css}\label{sc:2-3}]{code/chat.css}
+
+\lstinputlisting[caption={server.js}\label{sc:2-4}]{code/server.js}
+
+%htmlの実行例
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.35]{figure/2-1.png}
+  \end{center}
+  \caption[]{\texttt{chat.html}に接続し，メッセージの送信をした結果}
+  \label{fig:2-1}
+\end{figure}
+
+%server動作の図
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.7]{figure/2-2.png}
+  \end{center}
+  \caption[]{\texttt{server.js}の動作結果}
+  \label{fig:2-2}
+\end{figure}
 
 \newpage
 
