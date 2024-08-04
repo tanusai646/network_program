@@ -18,6 +18,6 @@ server.on('connection', ws => {             // WSサーバ機能の実行 ～ �
         });
     });
     ws.on('close', () => {                  // 切断時に実行（例：ページのリロード）
-    console.log('close');                   // サーバの標準出力に close と表示
+        console.log('close');                   // サーバの標準出力に close と表示
     });
 }); // 緑字：画面表示/メッセージ送信のWebSocket用メソッド
