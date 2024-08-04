@@ -10,19 +10,15 @@ ws.addEventListener('open', e => {
 ws.addEventListener('message', e => { 
     //console.log(e.target);
     const receivedata = JSON.parse(e.data);
+
     console.log(receivedata); 
 
     displayUser(receivedata.user, receivedata.from);
     displayMessage(receivedata.message, receivedata.from);
 });
 
-//<!-- ボタンクリック時に実行 ～ my_messageに送信したい文字列を設定し、WSサーバへ送信 -->
-/*document.getElementById('send_button').addEventListener('click', e => {
-    var my_message = "hello";
-    ws.send(my_message);
-});*/
 
-//コンソールに送信
+//wsを使って送信
 document.getElementById('message_button').addEventListener('click', e =>{
     var user = document.input2.user.value;
     var message = document.input2.message.value;

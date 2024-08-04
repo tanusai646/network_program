@@ -57,8 +57,7 @@ int main(){
                 printf("file can't the open\n");
                 exit(1);
             }
-            //strcpy(buf, "From Server via socket");
-            //write(sockfd_c, buf, strlen(buf));
+
             printf("start write\n");
             while(1){
                 memset(buf, '\0', sizeof(buf)); // buf[]読み込み前に初期化
@@ -79,10 +78,4 @@ int main(){
             printf("sarver wait\n");
         }
     }
-
-    //送受信操作
-
-
-    //ソケットの除去
-
  }
