@@ -20,9 +20,10 @@ int main(){
     //INETドメイン、ストリームソケットを利用
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
+    printf("wait server\n");
     //サーバー情報を設定
     address.sin_family = AF_INET;
-    address.sin_addr.s_addr = inet_addr("34.146.5.205");
+    address.sin_addr.s_addr = inet_addr("34.85.105.246");
     address.sin_port = htons(50000);
 
     //クライアントからの接続要求とサーバ情報を確認
