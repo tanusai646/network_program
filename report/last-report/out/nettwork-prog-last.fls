@@ -404,6 +404,33 @@ INPUT ./figure/3-4.png
 INPUT ./figure/3-4.png
 INPUT ./figure/3-4.png
 INPUT extractbb -B cropbox -O figure/3-4.png
+INPUT ./figure/4-1.png
+INPUT ./figure/4-1.png
+INPUT ./figure/4-1.png
+INPUT extractbb -B cropbox -O figure/4-1.png
+INPUT ./figure/4-2.png
+INPUT ./figure/4-2.png
+INPUT ./figure/4-2.png
+INPUT extractbb -B cropbox -O figure/4-2.png
+INPUT ./figure/4-3.png
+INPUT ./figure/4-3.png
+INPUT ./figure/4-3.png
+INPUT extractbb -B cropbox -O figure/4-3.png
+INPUT ./figure/4-4.png
+INPUT ./figure/4-4.png
+INPUT ./figure/4-4.png
+INPUT extractbb -B cropbox -O figure/4-4.png
+INPUT ./figure/4-5.png
+INPUT ./figure/4-5.png
+INPUT ./figure/4-5.png
+INPUT extractbb -B cropbox -O figure/4-5.png
+INPUT ./figure/4-6.png
+INPUT ./figure/4-6.png
+INPUT ./figure/4-6.png
+INPUT extractbb -B cropbox -O figure/4-6.png
+INPUT ./code/log.txt
+INPUT ./code/log.txt
+INPUT code/log.txt
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm

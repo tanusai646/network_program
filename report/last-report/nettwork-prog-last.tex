@@ -78,7 +78,7 @@ htmlの画面において，先に左側で名前とメッセージを入力し�
 \newpage
 
 \section*{演習3 ソケット通信を利用した簡易FTPの実現}
-\subsection*{3.1 ファイルを受診するクライアントプログラムの作成}
+\subsection*{3.1 ファイルを受信するクライアントプログラムの作成}
 ソースコード\ref*{sc:3-1}は，ソケット通信を利用し，学生番号を入力し，受診した文字列をテキストファイルに格納するプログラムである．
 図\ref*{fig:3-1}が，このプログラムを実行した際の出力である．
 
@@ -95,7 +95,7 @@ IPアドレス131.206.37.50に接続できた．
   \label{fig:3-1}
 \end{figure}
 
-\section*{3.2 取得ファイルの内容の確認，調査/報告}
+\subsection*{3.2 取得ファイルの内容の確認，調査/報告}
 取得したテキストファイルは以下の内容であった．
 \begin{tcolorbox}
   課題：ルータにおけるIPデータグラム（パケット）転送
@@ -187,6 +187,98 @@ OSPFはネットワーク内のルータが自分の接続(リンク)の状態�
 
 \newpage
 \section*{演習4 サーバー機能のクラウドへのデプロイ}
+演習3で作成した\texttt{ftp-server.c}をGoogle Cloudにデプロイし，クライアントから接続の挑戦を行った．
+結果としては\texttt{ftp-server.c}に接続できず，理想のことができなかったが，クラウドの使い方がある程度理解でき，かなり複雑なんだなと言うことが体験できた．
+
+以下では自分が行った内容と結果を記述していく．
+
+\subsubsection*{1.アカウントの作成}
+Google Cloudを始めるにあたり，アカウントの作成を行った．
+
+\subsubsection*{2. Google Cloud Platformにログイン，プロジェクトを作成する}
+まずは，Google Cloud Platformにログインした．
+その後，プロジェクトの作成を行い，そのプロジェクトにログインする．
+そのプロジェクトのホーム画面を図\ref*{fig:4-1}に表示している．
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.5]{figure/4-1.png}
+  \end{center}
+  \caption{プロジェクトのホーム画面}
+  \label{fig:4-1}
+\end{figure}
+
+\subsubsection*{3. VMの作成}
+\texttt{ftp-server.c}を実行するためのUbuntuを作成した．
+まずは，Google Cloudのログイン画面から\texttt{Compute Engine}という部分というところに移動し，APIを有効かした．
+その後インスタンスを作成し，実際にVMの作成に取り掛かった．
+インスタンスを作成した結果が図\ref*{fig:4-2}である．
+\texttt{ftp-server-20240805}というインスタンスが作成されている．
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.35]{figure/4-2.png}
+  \end{center}
+  \caption{インスタンスの作成結果}
+  \label{fig:4-2}
+\end{figure}
+
+
+\subsubsection*{4. \texttt{ftp-server.c}等のファイルをアップロードする}
+SSHで先程作成したインスタンスに接続し，\texttt{ftp-server.c}と\texttt{222C1021.txt}をアップロードした．
+SSH接続とアップロードの結果を図\ref*{fig:4-3}に示している．
+
+\texttt{ftp-server.c}に関して，IPアドレスとポート番号を変更する必要があったので変更を加えた．
+\texttt{ftp-client.c}もIPアドレスとポート番号の変更を行った．
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.8]{figure/4-3.png}
+  \end{center}
+  \caption{ファイルのアップロード状況}
+  \label{fig:4-3}
+\end{figure}
+
+
+\subsubsection*{5. ファイアーウォールの設定}
+先ほど設定したポート番号で接続できるようにファイアーウォールの設定を行った．
+作成した結果が図\ref*{fig:4-4}である．
+今回設定したものは\texttt{for-ftp-server}であり，すべてのIPアドレスに対してtcp:50000 が許可されている．
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.35]{figure/4-4.png}
+  \end{center}
+  \caption{設定したファイアーウォールの状況}
+  \label{fig:4-4}
+\end{figure}
+
+\subsubsection*{6. クライアントから接続}
+最終的にIPアドレスとポート番号を変更した\texttt{ftp-server-gcloud.c}をCloudのVM上で実行し，\texttt{ftp-client-gcloud.c}を自分のパソコンで実行を行った．
+その結果が図\ref*{fig:4-5}，\ref*{fig:4-6}である．
+\texttt{ftp-server-gcloud.c}の実行は問題なく行われている．
+しかし，\texttt{ftp-client-gcloud.c}では\texttt{Conection Refuced}というエラーが発生し接続ができなかった．
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.8]{figure/4-5.png}
+  \end{center}
+  \caption{\texttt{ftp-server-gcloud.c}の実行結果}
+  \label{fig:4-5}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.8]{figure/4-6.png}
+  \end{center}
+  \caption{\texttt{ftp-client-gcloud.c}の実行結果}
+  \label{fig:4-6}
+\end{figure}
+
+ファイアーウォールで設定したルールが適用された回数を意味する\textbf{ヒットカウント}が増加していることから，クライアントからの接続要求が立っていることは確認できた．
+また，そのログにて接続した痕跡が見られた(ソースコード\ref*{sc:4-1})．
+ただ，これらの情報に関して調べても接続できない理由ははっきりしなかったため，ここであきらめた．
+
+\lstinputlisting[caption={実行したときのファイアーウォールのログ}\label{sc:4-1}]{code/log.txt}
 
 \newpage
 \section*{備考}

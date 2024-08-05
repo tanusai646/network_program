@@ -1,0 +1,59 @@
+{
+  "insertId": "1eiw5avefena0",
+  "jsonPayload": {
+    "rule_details": {
+      "priority": 1000,
+      "ip_port_info": [
+        {
+          "ip_protocol": "TCP",
+          "port_range": [
+            "50000"
+          ]
+        }
+      ],
+      "direction": "INGRESS",
+      "source_range": [
+        "0.0.0.0/0"
+      ],
+      "reference": "network:default/firewall:for-ftp-server",
+      "action": "ALLOW"
+    },
+    "remote_location": {
+      "region": "Fukuoka",
+      "country": "jpn",
+      "continent": "Asia",
+      "city": "Iizuka"
+    },
+    "disposition": "ALLOWED",
+    "instance": {
+      "zone": "asia-northeast1-a",
+      "vm_name": "ftp-server-20240805",
+      "region": "asia-northeast1",
+      "project_id": "ftp-server-431407"
+    },
+    "vpc": {
+      "vpc_name": "default",
+      "project_id": "ftp-server-431407",
+      "subnetwork_name": "default"
+    },
+    "connection": {
+      "dest_ip": "10.146.0.3",
+      "protocol": 6,
+      "dest_port": 50000,
+      "src_ip": "131.206.231.102",
+      "src_port": 58006
+    }
+  },
+  "resource": {
+    "type": "gce_subnetwork",
+    "labels": {
+      "location": "asia-northeast1",
+      "subnetwork_id": "1817687114020573949",
+      "project_id": "ftp-server-431407",
+      "subnetwork_name": "default"
+    }
+  },
+  "timestamp": "2024-08-05T04:15:03.533411117Z",
+  "logName": "projects/ftp-server-431407/logs/compute.googleapis.com%2Ffirewall",
+  "receiveTimestamp": "2024-08-05T04:15:07.395005699Z"
+}

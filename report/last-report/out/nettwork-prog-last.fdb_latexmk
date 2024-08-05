@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1722777593 "out/nettwork-prog-last.dvi" "out/nettwork-prog-last.pdf" "out/nettwork-prog-last" 1722777594 0
-  "out/nettwork-prog-last.dvi" 1722777593 145076 8954dd36f78949e7a2fc2eddb85fc5c0 "latex"
+["dvipdf"] 1722844280 "out/nettwork-prog-last.dvi" "out/nettwork-prog-last.pdf" "out/nettwork-prog-last" 1722844282 0
+  "out/nettwork-prog-last.dvi" 1722844280 170224 328cc9f00b67d58831547d92804b68d6 "latex"
   (generated)
   "out/nettwork-prog-last.pdf"
   (rewritten before read)
-["latex"] 1722777589 "c:/Users/imayu/Documents/program/network_programming/report/last-report/nettwork-prog-last.tex" "out/nettwork-prog-last.dvi" "nettwork-prog-last" 1722777594 0
-  "c:/Users/imayu/Documents/program/network_programming/report/last-report/nettwork-prog-last.tex" 1722777583 11550 9858331ddba90042e2c4b26befef8588 ""
+["latex"] 1722844273 "c:/Users/imayu/Documents/program/network_programming/report/last-report/nettwork-prog-last.tex" "out/nettwork-prog-last.dvi" "nettwork-prog-last" 1722844282 0
+  "c:/Users/imayu/Documents/program/network_programming/report/last-report/nettwork-prog-last.tex" 1722844272 16121 bdbadb9e588d8ee1770602fcd8c803f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1693405946 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1693408683 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm" 1693408683 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -196,9 +196,10 @@
   "code/chat.css" 1722325283 918 a9d402e2ecfbf9bc04cdd4a022a53c56 ""
   "code/chat.html" 1722776624 966 267492f2b67ecc8555c8b91af62ac37f ""
   "code/chat.js" 1722776285 2126 c0538b34c260cb2957aa0c86edf2c83a ""
-  "code/ftp-client.c" 1722771648 1879 7c3395a566a00194014d70b3342d97d1 ""
+  "code/ftp-client.c" 1722832476 1879 7c3395a566a00194014d70b3342d97d1 ""
   "code/ftp-server.c" 1722771636 2518 3765c812a7dc066ef183095356cd2c33 ""
   "code/ftp.c" 1722771613 1900 7cd4877a70ba88090dd1bd79a0e970a3 ""
+  "code/log.txt" 1722843649 1525 efa9ecc59f80e0eb86ad2a1ad902831d ""
   "code/server.js" 1722760585 1790 084f1dc6248a6b5f3e83ae830428542e ""
   "figure/2-1.png" 1722776795 74390 6a5c4fe309af3e54be4d7736b94951ad ""
   "figure/2-2.png" 1722776816 8612 1793b8988dafff57f5b6c62f741116b4 ""
@@ -206,10 +207,16 @@
   "figure/3-2.png" 1722609666 57259 0832139fdba2bd0c495891a201d97aab ""
   "figure/3-3.png" 1722609083 64211 13cf16d1f55d628b1e806d7952c61b0f ""
   "figure/3-4.png" 1722609096 64728 5b782fa52b80d1ef8c9e02c63485a25f ""
+  "figure/4-1.png" 1722841108 37002 d5d38b7431082f9d1b828fdba591fa9a ""
+  "figure/4-2.png" 1722843220 72362 7e56063e83467155c2fefa55f8350925 ""
+  "figure/4-3.png" 1722842514 10930 4a699d2b1f52f33b642c8d2884fd0dc0 ""
+  "figure/4-4.png" 1722843101 84730 2998a0c1c08e4c109e4ebeebc5b39bc8 ""
+  "figure/4-5.png" 1722842538 14302 3ea2466d7575bec6ecbf14a7e3ef9302 ""
+  "figure/4-6.png" 1722843513 18682 2b651311bd95d40b1eb3e5af16d6783a ""
   "jlisting.sty" 1698678000 6230 9fa8fe97d5afbd5a433990256cc4d5a3 ""
-  "nettwork-prog-last.tex" 1722777583 11550 9858331ddba90042e2c4b26befef8588 ""
-  "out/nettwork-prog-last.aux" 1722777593 3305 7b796c5248d50018dae6addc94c6eb12 "latex"
-  "out/nettwork-prog-last.out" 1722777590 0 d41d8cd98f00b204e9800998ecf8427e "latex"
+  "nettwork-prog-last.tex" 1722844272 16121 bdbadb9e588d8ee1770602fcd8c803f4 ""
+  "out/nettwork-prog-last.aux" 1722844280 4972 fdf0b4f3db5d57115b75e49e054f6727 "latex"
+  "out/nettwork-prog-last.out" 1722844274 0 d41d8cd98f00b204e9800998ecf8427e "latex"
   (generated)
   "out/nettwork-prog-last.aux"
   "out/nettwork-prog-last.dvi"

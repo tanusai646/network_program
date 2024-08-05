@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.8.31)  4 AUG 2024 22:19
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.8.31)  5 AUG 2024 16:51
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -808,12 +808,42 @@ File: figure/3-3.png Graphic file (type bmp)
 <figure/3-3.png>
 File: figure/3-4.png Graphic file (type bmp)
 <figure/3-4.png>
-[15] [16] [17]
+[15] [16]
+File: figure/4-1.png Graphic file (type bmp)
+<figure/4-1.png>
+File: figure/4-2.png Graphic file (type bmp)
+<figure/4-2.png>
+
+Overfull \hbox (21.85062pt too wide) in paragraph at lines 219--220
+ [] 
+ []
+
+[17]
+File: figure/4-3.png Graphic file (type bmp)
+<figure/4-3.png>
+File: figure/4-4.png Graphic file (type bmp)
+<figure/4-4.png>
+
+Overfull \hbox (18.68875pt too wide) in paragraph at lines 249--250
+ [] 
+ []
+
+File: figure/4-5.png Graphic file (type bmp)
+<figure/4-5.png>
+
+Overfull \hbox (15.77103pt too wide) in paragraph at lines 263--264
+ [] 
+ []
+
+[18]
+File: figure/4-6.png Graphic file (type bmp)
+<figure/4-6.png>
+[19] [20]
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 193.
+(Font)              scaled to size 6.72699pt on input line 285.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 193.
-[18] (out/nettwork-prog-last.aux)
+(Font)              scaled to size 4.805pt on input line 285.
+[21] (out/nettwork-prog-last.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-06-01> patch level 1
@@ -823,12 +853,12 @@ Package rerunfilecheck Info: File `nettwork-prog-last.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27484 strings out of 475592
- 521090 string characters out of 5778113
+ 27530 strings out of 475592
+ 521903 string characters out of 5778113
  2176637 words of memory out of 5000000
- 48558 multiletter control sequences out of 15000+600000
+ 48598 multiletter control sequences out of 15000+600000
  574297 words of font info for 116 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  84i,6n,89p,493b,1992s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/nettwork-prog-last.dvi (18 pages, 145076 bytes).
+Output written on out/nettwork-prog-last.dvi (21 pages, 170224 bytes).
